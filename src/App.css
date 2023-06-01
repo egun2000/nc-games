@@ -49,7 +49,7 @@ ul {
 }
 
 .alt {
-  width: 800px;
+  width: 900px;
   border: 5px solid #646cffaa;
   padding: 20px;
   margin: 15px;
@@ -64,7 +64,7 @@ img {
   margin: 5px;
   border: 1px solid #ccc;
   float: right;
-  width: 150px;
+  width: 300px;
 }
 
 
@@ -78,7 +78,7 @@ h2{
 }
 img:hover{
   border-color: #646cff;
-  width: 200px
+  width: 300px
 }
 
 h4 {
@@ -88,3 +88,61 @@ h4 {
 h3 {
   text-align: left;
 }
+
+.rcardimg{
+  width: 600px;
+  position:
+  
+}
+.rcardimg:hover{
+  width: 600px
+}
+
+nav{
+  position:relative; 
+  top:0;
+  overflow: visible;
+  float: center
+  
+}
+
+.bodytxt{
+  text-align-last: auto;
+  width: 45%;
+  
+  
+}
+.rvwtitle{
+  text-decoration: underline;
+  
+}
+
+.infosec{
+  line-height: 0cm;
+}
+/* .span{
+  width: 900px;
+  border: 5px solid #646cffaa;
+  padding: 20px;
+  margin: 15px;
+
+} */
+
+/* .navbutton{
+  text-align: left;
+} */
+/* div{
+  width: 1000px;
+  border: 5px solid #646cffaa;
+  padding: 20px;
+  margin: 15px;
+  border-image-slice: fill;
+}  */
+
+/* nav {
+  background-color: #646cff;
+  border: #646cff;
+  padding: 20px;
+  margin: 20px;
+
+} */

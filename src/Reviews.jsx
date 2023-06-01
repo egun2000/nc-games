@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react'
 import { getReviews } from '../utils'
+import { Link } from 'react-router-dom'
 
 function Reviews () {
     const [reviewList, setReviewList] = useState([])
+    
+    
     useEffect(() => {
         getReviews().then((data) => {
           setReviewList(data)
@@ -14,11 +17,12 @@ function Reviews () {
             <h1>Welcome to Reviews</h1>
             <ul className='navList'>
         {reviewList.map((item) => {   
+            let num = item.review_id
+            const link = `/reviews/${num}`
           return (
-           
            <li key={item.review_id} className='alt'>
-              <h2>Title: {item.title}</h2>
-              <img src={item.review_img_url} alt={item.review_id} />
+              <Link to={link}><h2>Title: {item.title}</h2></Link>
+              <Link to={link}> <img src={item.review_img_url} alt={item.review_id} /></Link>
               <p>Username: {item.owner}</p>
               <p>Comments: {item.comment_count}</p>
               <p>Votes: {item.votes}</p>
