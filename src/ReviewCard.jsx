@@ -1,25 +1,26 @@
 import {  useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react'
-import { getReviews } from '../utils';
+import { getSingleReview } from '../utils';
 function ReviewCard () {
-    const id = useParams()
-  
-    const [oneList, setOneList] = useState([])
+    // const id = useParams()
+    const {review_id} = useParams()
+    
+    const [singleReview, setSingleReview] = useState({})
     useEffect(() => {
-        getReviews(id.review_id).then((data) => {
-          setOneList(data)
+        getSingleReview(review_id).then((data) => {
+          setSingleReview(data)
         })
-      }, [id.review_id])
-      const setData = {...oneList}
+      }, [review_id])
+      const setData = {...singleReview}
     
     return(
         <main>  
             
-        <h1 className='rvwtitle'>Review: {setData.title}</h1>
-        <img src={setData.review_img_url} alt={setData.review_id} className='rcardimg' />
+        <h1 className='reviewtitle'>Review: {setData.title}</h1>
+        <img src={setData.review_img_url} alt={setData.review_id} className='reviewcardimg' />
         <h3>Username: {setData.owner}</h3>
         <p className='bodytxt'>{setData.review_body}</p>
-        <div className='infosec'>
+        <div className='reviewinfo'>
               <h4>Designer: {setData.designer}</h4>
               <h4>Category: {setData.category}</h4>
               <h4>Votes: {setData.votes}</h4>

@@ -11,7 +11,7 @@ function App() {
   
 
   return (
-    <span>
+    <main className='content'>
     <Nav/>
     <Header/>
     <Routes>
@@ -20,7 +20,7 @@ function App() {
       <Route path="/categories" element={<Categories/>}></Route>
       <Route path="/reviews/:review_id" element={<ReviewCard/>}></Route>
     </Routes>  
-    </span>
+    </main>
     
   )
 }

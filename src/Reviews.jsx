@@ -17,12 +17,10 @@ function Reviews () {
             <h1>Welcome to Reviews</h1>
             <ul className='navList'>
         {reviewList.map((item) => {   
-            let num = item.review_id
-            const link = `/reviews/${num}`
           return (
            <li key={item.review_id} className='alt'>
-              <Link to={link}><h2>Title: {item.title}</h2></Link>
-              <Link to={link}> <img src={item.review_img_url} alt={item.review_id} /></Link>
+              <Link to={`/reviews/${item.review_id}`}><h2>Title: {item.title}</h2></Link>
+              <Link to={`/reviews/${item.review_id}`}> <img src={item.review_img_url} alt={item.review_id} /></Link>
               <p>Username: {item.owner}</p>
               <p>Comments: {item.comment_count}</p>
               <p>Votes: {item.votes}</p>

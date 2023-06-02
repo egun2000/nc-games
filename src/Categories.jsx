@@ -2,8 +2,7 @@ function Categories () {
     return (
         <>
         <h1>Welcome to Categories</h1>
-        <h1>Welcome to Categories</h1>
-        <h1>Welcome to Categories</h1>
+        
         </>
         
     )
